@@ -10,6 +10,8 @@
 		961A9BB51B306881007C4C6B /* WriteDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961A9BB41B306881007C4C6B /* WriteDataTests.swift */; };
 		962EE7741EAE79920092755B /* Issue55Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 962EE7731EAE79920092755B /* Issue55Tests.m */; };
 		962EE7751EAE79920092755B /* Issue55Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 962EE7731EAE79920092755B /* Issue55Tests.m */; };
+		962EE7771EAE7E130092755B /* Issue56Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 962EE7761EAE7E130092755B /* Issue56Tests.m */; };
+		962EE7781EAE7E130092755B /* Issue56Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 962EE7761EAE7E130092755B /* Issue56Tests.m */; };
 		962F9DA61D5D286B00205BEC /* UnzipKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 962F9DA41D5D286B00205BEC /* UnzipKit.strings */; };
 		962F9DA81D5D288B00205BEC /* UnzipKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 962F9D9E1D5D281E00205BEC /* UnzipKitResources.bundle */; };
 		9630C0381C6D27A4000693EE /* ExtractDataTests_Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9630C0371C6D27A4000693EE /* ExtractDataTests_Swift.swift */; };
@@ -115,6 +117,7 @@
 		961A9BB41B306881007C4C6B /* WriteDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteDataTests.swift; sourceTree = "<group>"; };
 		961A9BB61B306902007C4C6B /* UZKArchiveTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UZKArchiveTestCase.h; sourceTree = "<group>"; };
 		962EE7731EAE79920092755B /* Issue55Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Issue55Tests.m; sourceTree = "<group>"; };
+		962EE7761EAE7E130092755B /* Issue56Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Issue56Tests.m; sourceTree = "<group>"; };
 		962F9D9E1D5D281E00205BEC /* UnzipKitResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnzipKitResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		962F9DA01D5D281E00205BEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9630C0371C6D27A4000693EE /* ExtractDataTests_Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtractDataTests_Swift.swift; sourceTree = "<group>"; };
@@ -216,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				962EE7731EAE79920092755B /* Issue55Tests.m */,
+				962EE7761EAE7E130092755B /* Issue56Tests.m */,
 			);
 			path = IssueReproduction;
 			sourceTree = "<group>";
@@ -604,6 +608,7 @@
 				96DC15CB1C5FFEFE00B71F19 /* WriteBufferedDataTests.m in Sources */,
 				962EE7751EAE79920092755B /* Issue55Tests.m in Sources */,
 				96DC15C71C5FFE8C00B71F19 /* PasswordProtectionTests.m in Sources */,
+				962EE7781EAE7E130092755B /* Issue56Tests.m in Sources */,
 				96B10B361C5FF8F4003A692C /* ExtractBufferedDataTests.m in Sources */,
 				96DC15CD1C60008400B71F19 /* ZipFileDetectionTests.m in Sources */,
 				96DC15C31C5FFC7600B71F19 /* ListFilenamesTests.m in Sources */,
@@ -636,6 +641,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962EE7771EAE7E130092755B /* Issue56Tests.m in Sources */,
 				968C40C41B58619C004C128E /* ListFilenamesTests.m in Sources */,
 				968C40D81B5863A9004C128E /* ErrorHandlingTests.m in Sources */,
 				968C40DE1B58642C004C128E /* MultithreadingTests.m in Sources */,
