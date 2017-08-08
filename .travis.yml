@@ -1,11 +1,14 @@
 language:
   - objective-c
 
-osx_image: xcode8.2
+osx_image: xcode8.3
 
 before_install:
     # Used to allow pushing to CocoaPods only after all matrixed builds have succeeded
     - npm install --save-dev travis-after-all
+
+    # Make log level less verbose. Temporarily undo if more info is needed
+    - sudo log config --mode "level:default" --subsystem com.abbey-code.UnzipKit
 
 matrix:
   include:
