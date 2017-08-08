@@ -21,5 +21,8 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
       'UnzipKitResources' => ['Resources/**/*']
   }
+  s.test_spec 'Tests' do |test_spec|
+    test_spec.source_files = 'Tests/*.{h,m,swift}'
+  end
   s.library = "z"
 end
