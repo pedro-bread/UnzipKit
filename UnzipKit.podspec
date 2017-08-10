@@ -22,7 +22,8 @@ Pod::Spec.new do |s|
       'UnzipKitResources' => ['Resources/**/*']
   }
   s.test_spec 'Tests' do |test_spec|
-    test_spec.source_files = 'Tests/*.{h,m,swift}'
+    test_spec.source_files = 'Tests/*.{h,m}'
+    test_spec.resources = ['Tests/Test Data']
   end
   s.library = "z"
 end

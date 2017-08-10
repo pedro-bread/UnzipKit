@@ -7,6 +7,11 @@ before_install:
     # Used to allow pushing to CocoaPods only after all matrixed builds have succeeded
     - npm install --save-dev travis-after-all
 
+    # Need to have at least v1.3.0
+    - pod --version
+    - gem install cocoapods
+    - pod --version
+
     # Make log level less verbose. Temporarily undo if more info is needed
     - sudo log config --mode "level:default" --subsystem com.abbey-code.UnzipKit
 
