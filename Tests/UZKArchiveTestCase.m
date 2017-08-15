@@ -13,6 +13,12 @@
 
 static NSDateFormatter *testFileInfoDateFormatter;
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundef"
+#if UNIFIED_LOGGING_SUPPORTED
+os_log_t unzipkit_log;
+#endif
+#pragma clang diagnostic pop
 
 
 @implementation UZKArchiveTestCase
