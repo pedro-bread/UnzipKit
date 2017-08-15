@@ -51,7 +51,9 @@ extern os_log_t unzipkit_log; // Declared in UZKArchive.m
 
 
 // Only used below
-#define _removeLogFormatTokens(format) [@format stringByReplacingOccurrencesOfString:@"{public}" withString:@""]
+#define _removeLogFormatTokens(format) [[@format \
+                                            stringByReplacingOccurrencesOfString:@"{public}" withString:@""] \
+                                            stringByReplacingOccurrencesOfString:@"{time_t}" withString:@""]
 #define _stringify(a) #a
 #define _nsLogWithoutWarnings(format, ...) \
     _Pragma( _stringify( clang diagnostic push ) ) \
