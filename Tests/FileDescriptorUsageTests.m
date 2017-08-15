@@ -9,11 +9,13 @@
 #import "UZKArchiveTestCase.h"
 @import UnzipKit;
 
+// These tests use a command line tool to count file descriptors
+#if !TARGET_OS_IPHONE
+
 @interface FileDescriptorUsageTests : UZKArchiveTestCase
 @end
 
 @implementation FileDescriptorUsageTests
-
 
 - (void)testFileDescriptorUsage
 {
@@ -166,5 +168,6 @@
     XCTAssertEqualWithAccuracy(initialFileCount, finalFileCount, 5, @"File descriptors were left open");
 }
 
-
 @end
+
+#endif
