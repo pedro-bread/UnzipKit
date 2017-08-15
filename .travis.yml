@@ -33,10 +33,10 @@ matrix:
 #      script: xcodebuild -workspace UnzipKit.xcworkspace -scheme UnzipKit-iOS -destination 'platform=iOS Simulator,name=iPhone 7,OS=latest' -configuration Release analyze test ENABLE_NS_ASSERTIONS=1 CLANG_ANALYZER_OUTPUT=html CLANG_ANALYZER_OUTPUT_DIR=analyzer-output && [[ -z `find analyzer-output -name "*.html"` ]]
 #      env: Name=iOS
 
-   - stage: Test
-     # The CLANG arguments and find command fail the build on analyzer errors
-     script: ./Scripts/install-demo-libs.sh && xcodebuild -workspace UnzipKitDemo/UnzipKitDemo.xcworkspace -scheme UnzipKitDemo -sdk iphonesimulator -configuration Release analyze test CLANG_ANALYZER_OUTPUT=html CLANG_ANALYZER_OUTPUT_DIR=analyzer-output && [[ -z `find analyzer-output -name "*.html"` ]]
-     env: Name=DemoAppBuild
+    - stage: Test
+      # The CLANG arguments and find command fail the build on analyzer errors
+      script: ./Scripts/install-demo-libs.sh && xcodebuild -workspace UnzipKitDemo/UnzipKitDemo.xcworkspace -scheme UnzipKitDemo -sdk iphonesimulator -configuration Release analyze test CLANG_ANALYZER_OUTPUT=html CLANG_ANALYZER_OUTPUT_DIR=analyzer-output && [[ -z `find analyzer-output -name "*.html"` ]]
+      env: Name=DemoAppBuild
 
     - stage: Validate
       script: ./Scripts/cocoapod-validate.sh
