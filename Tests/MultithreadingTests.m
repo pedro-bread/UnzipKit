@@ -7,7 +7,7 @@
 //
 
 #import "UZKArchiveTestCase.h"
-@import UnzipKit;
+#import <UnzipKit/UnzipKit.h>
 #import "UnzipKitMacros.h"
 
 // These tests use a command line tool to create a large archive

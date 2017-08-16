@@ -7,7 +7,7 @@
 //
 
 #import "UZKArchiveTestCase.h"
-@import UnzipKit;
+#import <UnzipKit/UnzipKit.h>
 
 // These tests use a command line tool to count file descriptors
 #if !TARGET_OS_IPHONE

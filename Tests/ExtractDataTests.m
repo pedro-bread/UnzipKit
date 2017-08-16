@@ -7,7 +7,7 @@
 //
 
 #import "UZKArchiveTestCase.h"
-@import UnzipKit;
+#import <UnzipKit/UnzipKit.h>
 #import "UnzipKitMacros.h"
 
 @interface ExtractDataTests : UZKArchiveTestCase
