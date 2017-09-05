@@ -142,7 +142,7 @@ typedef NS_ENUM(NSInteger, UZKErrorCode) {
  *
  *  Comments are written in UTF-8, and read in UTF-8 and Windows/CP-1252, falling back to defaultCStringEncoding
  */
-@property(atomic, nullable) NSString *comment;
+@property(retain, atomic, nullable) NSString *comment;
 
 
 /**
