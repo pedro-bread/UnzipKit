@@ -643,7 +643,7 @@ NS_DESIGNATED_INITIALIZER
     BOOL success = [self extractBufferedDataFromFile:filePath
                                                error:&extractError
                                               action:^(NSData *dataChunk, CGFloat percentDecompressed) {
-                                                  UZKLogDebug("Appending data chunk of size %lu (%f%% complete)", (unsigned long)dataChunk.length, percentDecompressed);
+                                                  UZKLogDebug("Appending data chunk of size %lu (%.3f%% complete)", (unsigned long)dataChunk.length, percentDecompressed * 100);
 
                                                   if (progress) {
                                                       progress(percentDecompressed);
@@ -803,7 +803,7 @@ NS_DESIGNATED_INITIALIZER
                     break;
                 }
                 
-                UZKLogDebug("bytesRead: %d", bytesRead);
+                UZKLogDebug("bytesRead: %{iec-bytes}d (%d bytes)", bytesRead, bytesRead);
 
                 data.length = bytesRead;
                 bytesDecompressed += bytesRead;
@@ -1019,7 +1019,7 @@ compressionMethod:(UZKCompressionMethod)method
             
             if (progress) {
                 CGFloat percentComplete = i / (CGFloat)data.length;
-                UZKLogDebug("Calling progress block at %f%%", percentComplete);
+                UZKLogDebug("Calling progress block at %.3f%%", percentComplete * 100);
                 progress(percentComplete);
             }
         }
@@ -1150,7 +1150,7 @@ compressionMethod:(UZKCompressionMethod)method
         }
         
         BOOL result = action(^BOOL(const void *bytes, unsigned int length) {
-            UZKLogInfo("Writing %u bytes into archive from buffer", length);
+            UZKLogInfo("Writing %{iec-bytes}u (%u bytes) into archive from buffer", length, length);
             int writeErr = zipWriteInFileInZip(self.zipFile, bytes, length);
             if (writeErr != ZIP_OK) {
                 UZKLogError("Error writing data from buffer: %d", writeErr);
@@ -2202,7 +2202,7 @@ compressionMethod:(UZKCompressionMethod)method
         return nil;
     }
     
-    UZKLogDebug("%d bytes read", bytes);
+    UZKLogDebug("%{iec-bytes}d (%d bytes) read", bytes, bytes);
     data.length = bytes;
     return data;
 }
