@@ -39,7 +39,7 @@ matrix:
       env: Name=DemoAppBuild
 
     - stage: Validate
-      script: travis_wait 30 ./Scripts/cocoapod-validate.sh
+      script: ./Scripts/cocoapod-validate.sh
       env: Name=CocoaPods
 
 #    - stage: Validate
