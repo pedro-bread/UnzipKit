@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo Testing...
-git tag -l
-
 if [ -z "$TRAVIS_TAG" ]; then
     TRAVIS_TAG_SUBSTITUTED=1
     export TRAVIS_TAG="$(git tag -l | tail -1)"
