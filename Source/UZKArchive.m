@@ -187,9 +187,12 @@ NS_DESIGNATED_INITIALIZER
 {
     UZKCreateActivity("Read Archive URL");
 
+    NSError *checkExistsError = nil;
+
     if (!self.fileBookmark
-        || (self.fallbackURL && [self.fallbackURL checkResourceIsReachableAndReturnError:NULL]))
+        || (self.fallbackURL && [self.fallbackURL checkResourceIsReachableAndReturnError:&checkExistsError]))
     {
+		UZKLogDebug("checkResourceIsReachableAndReturnError returned false with error: %{public}@", checkExistsError);
         UZKLogInfo("Returning fallback URL for archive");
         return self.fallbackURL;
     }
